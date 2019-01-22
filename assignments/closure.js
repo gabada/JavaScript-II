@@ -1,6 +1,15 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+function learning(tech) {
+  console.log(`Today we are learning ${tech} at Lambda School`);
 
+  function tomorrowKnow() {
+    console.log(`Tomorrow we should know ${tech} since we learned it today.`);
+  }
+  tomorrowKnow();
+}
+
+learning('JavaScript');
 
 // ==== Challenge 2: Create a counter function ====
 const counter = () => {
