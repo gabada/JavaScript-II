@@ -2,7 +2,7 @@
 
 const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
-/* 
+
 
   //Given this problem: 
   
@@ -19,15 +19,21 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
     console.log(first)
   });
 
-*/
+
 
 
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
+  return cb(arr.length);
 }
+
+getLength(items, function(long) {
+  console.log(long)
+});
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
+  return cb(arr.pop())
 }
 
 function sumNums(x, y, cb) {
