@@ -97,7 +97,23 @@ console.log(emailList);
 
 // Problem 2
 // Create a leader board for donations with First name, Last name, current donation amount.
+let donationLeaders = [];
+runners.forEach(function(participant) {
+    donationLeaders.push(`${participant.donation} ${participant.first_name} ${participant.last_name} `);
+});
 
+function compareNumeric(a,b) {
+    if (parseInt(a) > parseInt(b)) return 1;
+    if (parseInt(a) == parseInt(b)) return 0;
+    if (parseInt(a) < parseInt(b)) return -1;
+}
+
+console.log(donationLeaders.sort(compareNumeric));
 
 // Problem 3
 // See if people work at the same company. Need First name, Last name and company
+// let sameCompany = runners.filter((companyName) => {
+//     return companyName.company_name === runners.company_name;
+// });
+
+// console.log(sameCompany);
