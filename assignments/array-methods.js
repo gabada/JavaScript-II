@@ -111,9 +111,8 @@ function compareNumeric(a,b) {
 console.log(donationLeaders.sort(compareNumeric));
 
 // Problem 3
-// See if people work at the same company. Need First name, Last name and company
-// let sameCompany = runners.filter((companyName) => {
-//     return companyName.company_name === runners.company_name;
-// });
-
-// console.log(sameCompany);
+// Make all of the company names capitals since they are sponsors.
+let companyCaps = runners.map(function(caps) {
+    return `${caps.company_name.toUpperCase()}`
+});
+console.log(companyCaps);
