@@ -103,9 +103,9 @@ runners.forEach((participant) => {
 });
 
 function compareNumeric(a,b) {
-    if (parseInt(a) > parseInt(b)) return 1;
+    if (parseInt(a) < parseInt(b)) return 1;
     if (parseInt(a) == parseInt(b)) return 0;
-    if (parseInt(a) < parseInt(b)) return -1;
+    if (parseInt(a) > parseInt(b)) return -1;
 }
 
 console.log(donationLeaders.sort(compareNumeric));
